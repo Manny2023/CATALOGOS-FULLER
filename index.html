@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi PWA</title>
+    <title>Mi PWA con Scroll</title>
 
     <!-- Etiquetas importantes para hacer la PWA instalable -->
     <link rel="manifest" href="/manifest.json">
@@ -28,11 +28,44 @@
             });
         }
     </script>
+
+    <!-- Estilos para habilitar el scroll y ajustar el contenido -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow-y: auto; /* Habilitar scroll vertical */
+        }
+
+        /* Asegurar que el iframe tome el tamaño completo */
+        iframe {
+            width: 100%;
+            height: 90vh; /* 90% del viewport height para dejar espacio para el título */
+            border: none; /* Quitar el borde del iframe */
+        }
+
+        /* Contenedor para centrar el contenido */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilo básico del título */
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div class="container">
+        <h1>Bienvenido a Mi PWA</h1>
+
         <!-- Aquí está el contenido de tu Blogger embebido -->
-        <iframe src="https://catalogosfuller.blogspot.com/p/catalogos-jafra-body-font-family-arial.html" width="100%" height="100%"></iframe>
+        <iframe src="https://tublogger.blogspot.com" title="Contenido de Blogger"></iframe>
     </div>
 </body>
 </html>
