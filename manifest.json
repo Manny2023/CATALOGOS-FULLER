@@ -1,0 +1,26 @@
+
+   
+ {
+  "short_name": "FULLER",
+  "name": "CATALOGOS FULLER",
+  "icons": [
+  {
+      "src": "https://i.ibb.co/s1kfX7S/catalogos-fuller-1.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+	 {
+      "src": "https://i.ibb.co/WyLGP7M/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#00060a",
+  "theme_color": "#00060a"
+}
+   
+      
+      
