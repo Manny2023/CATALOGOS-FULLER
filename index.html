@@ -7,11 +7,6 @@
     <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhczamfeeDrsFJhdsPVwiRKthg8ZWKfGEETdSFormIQgtb9fVLMoc_ktkeZEZdU-vu7mMDGwH4WvUAdmN2RH_z7rHPKMuo1o1dzyPwT8cr4cZQRrT5U4reWuTIJaLnuXV0441sY_Oto-lPWuG6I0ysJOBhagCN4si4n4dDt51w6cnNfXjSh_8u9CGjp5VQ/s32/favicon-32x32.png" type="image/png">
     <link rel="manifest" href="manifest.json">
 
-    <!-- Script de ads -->
-    <div id="ads-container" style="position: fixed; bottom: 60px; width: 100%; z-index: 999;">
-        <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',8269180,document.createElement('script'))</script>
-    </div>
-
     <style>
         body {
             margin: 0;
@@ -21,7 +16,7 @@
         }
         iframe {
             width: 100%;
-            height: 100%; /* El iframe ocupa todo el alto del body */
+            height: calc(100% - 80px); /* Deja espacio para el banner y anuncios */
             border: none; /* Sin borde */
             display: block; /* Elimina espacios en blanco */
         }
@@ -58,6 +53,11 @@
 <body>
     <iframe src="https://catalogosfuller.blogspot.com/p/catalogos-jafra-body-font-family-arial.html"></iframe>
     
+    <!-- Contenedor de anuncios -->
+    <div id="ads-container" style="position: fixed; bottom: 60px; width: 100%; z-index: 999;">
+        <script>(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',8269180,document.createElement('script'))</script>
+    </div>
+
     <!-- Banner de instalación -->
     <div id="install-banner">
         <p style="margin: 0;">¡Instala nuestra aplicación para una mejor experiencia!</p>
