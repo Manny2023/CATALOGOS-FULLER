@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!doctype html>
+    <title>INICIO FULLER PORTADA PRINCIPAL</title>
+    <link rel="icon" href="https://i.ibb.co/JQ25WbN/favicon-32x32.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
         #menu {
@@ -18,7 +21,9 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            position: relative;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Asegurarse de que esté por encima del contenido */
         }
 
         #toggleButton {
@@ -59,72 +64,7 @@
             #navLinks {
                 flex-direction: column;
                 align-items: center;
-                max-height: 0; /* Ocultar en móviles por defecto */
-                opacity: 0; /* Ocultar en móviles por defecto */
             }
-        }
-    </style>
-
-
-
-<div id="menu">
-    <h1 style="margin: 0;">FULLER</h1>
-    <button id="toggleButton">#</button>
-</div>
-
-<div id="navLinks">
-    <a href="https://catalogosfuller.blogspot.com/p/catalogos-jafra-body-font-family-arial.html">
-        <button>ACTUALIZAR</button>
-    </a>
-    <a href="https://catalogosfuller.blogspot.com/2024/10/catalogofullercampana152024.html">
-        <button>VER ACTUAL</button>
-    </a>
-    <a href="https://catalogosfuller.blogspot.com/p/todos-los-catalogos.html">
-        <button>VER TODOS</button>
-    </a>
-    <a href="https://catalogosfuller.blogspot.com/p/pdf-de-campanas.html">
-        <button>DESCARGAR PDF</button>
-    </a>
- <a href="https://catalogosfuller.blogspot.com/p/radio.html">
-        <button>radio</button>
-    </a>
-<a href="https://wa.me/?text=Mira%20esta%20PWA%20que%20encontré!%20https://catalogos-fuller.netlify.app/" target="_blank" rel="noopener noreferrer">
-    <button>COMPARTIR</button>
-
-<script>
-    const toggleButton = document.getElementById('toggleButton');
-    const navLinks = document.getElementById('navLinks');
-
-    toggleButton.addEventListener('click', () => {
-        const isVisible = navLinks.style.maxHeight && navLinks.style.maxHeight !== '0px';
-        if (isVisible) {
-            navLinks.style.maxHeight = '0'; // Ocultar
-            navLinks.style.opacity = '0'; // Ocultar
-            toggleButton.textContent = 'Mostrar Menú'; // Cambiar texto del botón
-        } else {
-            navLinks.style.maxHeight = '300px'; // Ajustar según el contenido
-            navLinks.style.opacity = '1'; // Mostrar
-            toggleButton.textContent = 'Ocultar Menú'; // Cambiar texto del botón
-        }
-    });
-
-</script>
-
-
-</a></div></!doctype>
-    <title>INICIO FULLER PORTADA PRINCIPAL</title>
-    <link rel="icon" href="https://i.ibb.co/JQ25WbN/favicon-32x32.png" type="image/png">
-    <link rel="manifest" href="manifest.json">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         .content {
@@ -132,6 +72,7 @@
             padding: 20px;
             width: 90%;
             max-width: 1200px;
+            margin: auto;
         }
 
         .button-container {
@@ -140,8 +81,6 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
-            width: 100%;
-            margin: 0 auto;
         }
 
         .catalog-button {
@@ -181,8 +120,6 @@
             }
 
             .catalog-button {
-                padding: 20px 25px;
-                font-size: 18px;
                 width: 30%;
             }
 
@@ -193,8 +130,6 @@
 
         @media (min-width: 1024px) {
             .catalog-button {
-                padding: 25px 30px;
-                font-size: 20px;
                 width: 25%;
             }
 
@@ -205,73 +140,54 @@
     </style>
 </head>
 <body>
+    <div id="menu">
+        <h1 style="margin: 0;">FULLER</h1>
+        <button id="toggleButton">#</button>
+    </div>
+
+    <div id="navLinks">
+        <a href="https://catalogosfuller.blogspot.com/p/catalogos-jafra-body-font-family-arial.html">
+            <button>ACTUALIZAR</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/2024/10/catalogofullercampana152024.html">
+            <button>VER ACTUAL</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/p/todos-los-catalogos.html">
+            <button>VER TODOS</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/p/pdf-de-campanas.html">
+            <button>DESCARGAR PDF</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/p/radio.html">
+            <button>RADIO</button>
+        </a>
+        <a href="https://wa.me/?text=Mira%20esta%20PWA%20que%20encontré!%20https://catalogos-fuller.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <button>COMPARTIR</button>
+        </a>
+    </div>
+
     <div class="content">
         <div class="button-container">
-            <a class="catalog-button" href="https://manny2023.github.io/CATALOGOS-FULLER/catalogoactual.html">
-                <img alt="Logo 1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5qdJtFbs7x5dmNJAQMXOL_yF4WMzBLdIjFWxZ2mXaIHZLZ6BdtEq13oPszF1nQRhVhpv0KuYT063od9wSrnCeR_7h9X8xQe3ssF-mfdEn5JlPlHYygE-gen_QJFrVOUPkkgU4GSJbOBaHjosxAaXmH6LCenLvWH1UunSn03kyZa6FPmbWp2UUS6b_oZA/s512/catalogos.png" />
-                VER CATALOGO ACTUAL
-            </a>
-
-            <a class="catalog-button" href="https://catalogosfuller.blogspot.com/p/todos-los-catalogos.html">
-                <img alt="Logo 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgd_FzhsDAGhW7LZ2WVrCKP6-LoNev3u7AW952s6px4bgdSoRbfQM-1pEglLInvEcgHHBwen3XF5YikrMb7CrRuNenW9tFu-WMg2EFt8-1JDunk5NU5zwgHwkbNHnUxS-L2UXJWENTxbkYVLOkUcLRUJS9iOIbPDqeuHqKDPpyTBVmnLee651dVPJC3gXU/s512/catalogar%20(1).png" />
-                VER TODOS LOS CATALOGOS
-            </a>
-
-            <a class="catalog-button" href="https://manny2023.github.io/CATALOGOS-FULLER/DESCARGARPDF.HTML">
-                <img alt="Logo 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEjiYycfnFF8wOWIAMk4vh-H8Qri5pXVQpZ-XTYV0gxuEtb3WxGrxoyV5XX8aHbZ-hubWw2gt9vU4HGh94o6eerr0cicA8QqYfLhrKae33B0p06H7YNybeUifqRXo4WJVt5HegDq4mANPWwVHupHgPXXOz06j5vXGSlSVN2Oqg1Zhdb1MPIXbuiWGZTQI/s320/catalogar.png" />
-                DESCARGAR LOS CATALOGOS
-            </a>
+            <!-- Aquí va el contenido del catálogo -->
         </div>
     </div>
 
-    <!-- Banner de instalación -->
-    <div id="install-banner" style="display:none;">
-        <p style="margin: 0;">¡Instala nuestra aplicación para una mejor experiencia!</p>
-        <button id="install-button">Instalar</button>
-    </div>
-
-    <script src="main.js"></script>
     <script>
-        // Este bloque registra el Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('worker.js?' + Math.random())
-                .then(function(registration) {
-                    console.log('Service Worker registrado con éxito:', registration);
-                })
-                .catch(function(error) {
-                    console.log('Error al registrar el Service Worker:', error);
-                });
-            });
-        }
+        const toggleButton = document.getElementById('toggleButton');
+        const navLinks = document.getElementById('navLinks');
 
-        // Código para manejar el banner de instalación
-        let deferredPrompt;
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            showInstallBanner();
+        toggleButton.addEventListener('click', () => {
+            const isVisible = navLinks.style.maxHeight && navLinks.style.maxHeight !== '0px';
+            if (isVisible) {
+                navLinks.style.maxHeight = '0';
+                navLinks.style.opacity = '0';
+                toggleButton.textContent = '#';
+            } else {
+                navLinks.style.maxHeight = '300px';
+                navLinks.style.opacity = '1';
+                toggleButton.textContent = 'Ocultar Menú';
+            }
         });
-
-        function showInstallBanner() {
-            const installBanner = document.getElementById('install-banner');
-            installBanner.style.display = 'block';
-
-            const installButton = document.getElementById('install-button');
-            installButton.addEventListener('click', () => {
-                installBanner.style.display = 'none';
-                deferredPrompt.prompt();
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('Usuario aceptó la instalación');
-                    } else {
-                        console.log('Usuario rechazó la instalación');
-                    }
-                    deferredPrompt = null;
-                });
-            });
-        }
     </script>
 </body>
 </html>
