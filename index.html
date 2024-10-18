@@ -191,3 +191,172 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ 
+    <title>INICIO FULLER PORTADA PRINCIPAL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .catalog-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            border: 2px solid #000;
+            border-radius: 15px;
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #000;
+            background: transparent;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s, color 0.3s;
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        .catalog-button img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .catalog-button:hover {
+            transform: scale(1.05);
+            color: #000;
+            border-color: #000;
+        }
+
+        @media (min-width: 768px) {
+            .button-container {
+                justify-content: space-between;
+            }
+
+            .catalog-button {
+                padding: 20px 25px;
+                font-size: 18px;
+                width: 30%;
+            }
+
+            .catalog-button img {
+                width: 80px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .catalog-button {
+                padding: 25px 30px;
+                font-size: 20px;
+                width: 25%;
+            }
+
+            .catalog-button img {
+                width: 100px;
+            }
+        }
+
+        /* Botón de instalación */
+        #install-button {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #install-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="button-container">
+            <a class="catalog-button" href="https://manny2023.github.io/CATALOGOS-FULLER/catalogoactual.html">
+                <img alt="Logo 1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5qdJtFbs7x5dmNJAQMXOL_yF4WMzBLdIjFWxZ2mXaIHZLZ6BdtEq13oPszF1nQRhVhpv0KuYT063od9wSrnCeR_7h9X8xQe3ssF-mfdEn5JlPlHYygE-gen_QJFrVOUPkkgU4GSJbOBaHjosxAaXmH6LCenLvWH1UunSn03kyZa6FPmbWp2UUS6b_oZA/s512/catalogos.png" />
+                VER CATALOGO ACTUAL
+            </a>
+
+            <a class="catalog-button" href="https://catalogosfuller.blogspot.com/p/todos-los-catalogos.html">
+                <img alt="Logo 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgd_FzhsDAGhW7LZ2WVrCKP6-LoNev3u7AW952s6px4bgdSoRbfQM-1pEglLInvEcgHHBwen3XF5YikrMb7CrRuNenW9tFu-WMg2EFt8-1JDunk5NU5zwgHwkbNHnUxS-L2UXJWENTxbkYVLOkUcLRUJS9iOIbPDqeuHqKDPpyTBVmnLee651dVPJC3gXU/s512/catalogar%20(1).png" />
+                VER TODOS LOS CATALOGOS
+            </a>
+
+            <a class="catalog-button" href="https://manny2023.github.io/CATALOGOS-FULLER/DESCARGARPDF.HTML">
+                <img alt="Logo 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEjiYycfnFF8wOWIAMk4vh-H8Qri5pXVQpZ-XTYV0gxuEtb3WxGrxoyV5XX8aHbZ-hubWw2gt9vU4HGh94o6eerr0cicA8QqYfLhrKae33B0p06H7YNybeUifqRXo4WJVt5HegDq4mANPWwVHupHgPXXOz06j5vXGSlSVN2Oqg1Zhdb1MPIXbuiWGZTQI/s320/catalogar.png" />
+                DESCARGAR LOS CATALOGOS
+            </a>
+        </div>
+    </div>
+
+    <!-- Botón de instalación de la PWA -->
+    <button id="install-button">Instalar App</button>
+
+    <script>
+        let deferredPrompt;
+        const installButton = document.getElementById('install-button');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Evita que el navegador muestre la solicitud de instalación por defecto
+            e.preventDefault();
+            // Guarda el evento para usarlo más tarde
+            deferredPrompt = e;
+            // Muestra el botón de instalación
+            installButton.style.display = 'block';
+        });
+
+        installButton.addEventListener('click', () => {
+            // Oculta el botón de instalación
+            installButton.style.display = 'none';
+            // Muestra la ventana de instalación
+            deferredPrompt.prompt();
+            // Espera a que el usuario responda
+            deferredPrompt.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('El usuario aceptó la instalación');
+                } else {
+                    console.log('El usuario rechazó la instalación');
+                }
+                deferredPrompt = null;
+            });
+        });
+    </script>
+</body>
+</html>
