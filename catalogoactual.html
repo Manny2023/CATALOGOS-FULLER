@@ -3,39 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CATALOGO actual</title>
+    <title>CATALOGOS FULLER</title>
     <link rel="icon" href="https://i.ibb.co/JQ25WbN/favicon-32x32.png" type="image/png">
     <link rel="manifest" href="manifest.json">
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Evita scrolls innecesarios */
-            height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
         }
-        iframe {
-            width: 100%;
-            height: 100%; /* El iframe ocupa todo el alto del body */
-            border: none; /* Sin borde */
-            display: block; /* Elimina espacios en blanco */
+
+        #menu {
+            background-color: #fa6e55;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
+
+        #toggleButton {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        #navLinks {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        #navLinks a {
+            text-decoration: none;
+        }
+
+        #navLinks button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            #navLinks {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        #content {
+            padding: 20px;
+            text-align: center;
+        }
+
         #install-banner {
-            display: none; /* Oculto por defecto */
+            display: none;
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #4CAF50; /* Color verde */
+            background-color: #4CAF50;
             color: white;
             text-align: center;
             padding: 15px 0;
             z-index: 1000;
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px 10px 0 0; /* Bordes redondeados */
-            font-family: Arial, sans-serif; /* Fuente */
+            border-radius: 10px 10px 0 0;
+            font-family: Arial, sans-serif;
         }
+
         #install-button {
-            background-color: #fff; /* Botón blanco */
-            color: #4CAF50; /* Texto verde */
+            background-color: #fff;
+            color: #4CAF50;
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
@@ -43,35 +94,340 @@
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
         }
+
         #install-button:hover {
-            background-color: #f1f1f1; /* Cambio de color al pasar el ratón */
-            transform: scale(1.05); /* Efecto de aumento */
+            background-color: #f1f1f1;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <iframe src="https://catalogosfuller.blogspot.com/p/window.html"></iframe>
-    
-    <!-- Banner de instalación -->
-    <div id="install-banner">
-        <p style="margin: 0;">¡Instala nuestra aplicación para una mejor experiencia!</p>
-        <button id="install-button">Instalar</button>
+    <div id="menu">
+        <h1 style="margin: 0;">FULLER</h1>
+        <button id="toggleButton">#</button>
     </div>
 
-    <script src="main.js"></script>
+    <div id="navLinks">
+        <a href="https://catalogosfuller.blogspot.com/p/catalogos-jafra-body-font-family-arial.html">
+            <button>ACTUALIZAR</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/2024/10/catalogofullercampana152024.html">
+            <button>VER ACTUAL</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/p/todos-los-catalogos.html">
+            <button>VER TODOS</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/p/pdf-de-campanas.html">
+            <button>DESCARGAR PDF</button>
+        </a>
+        <a href="https://catalogosfuller.blogspot.com/p/radio.html">
+            <button>radio</button>
+        </a>
+        <a href="https://wa.me/?text=Mira%20esta%20PWA%20que%20encontré!%20https://catalogos-fuller.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <button>COMPARTIR</button>
+        </a>
+    </div>
+
+    <!-- Aquí puedes agregar tu propio contenido -->
+    <div id="content">
+        <!-- Inserta tu código aquí -->
+      <p style="margin: 20px 0px;"></p>
+<p style="margin: 20px 0;"></p>
+<p style="margin: 20px 0;"></p>
+
+
+
+<style>
+  .catalog-container {
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+  }
+
+  .catalog-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .catalog-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .catalog-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .nav-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 2px solid white; /* Agregar un borde blanco */
+    padding: 20px; /* Aumentar el padding */
+    cursor: pointer;
+    font-size: 36px; /* Aumentar el tamaño de la fuente */
+    width: 60px; /* Establecer un ancho fijo */
+    height: 60px; /* Establecer una altura fija */
+    line-height: 0;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  .nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+
+<div class="catalog-container">
+  <div class="catalog-item">
+    <!--Imagen principal del catálogo-->
+    <img alt="Catálogo 1" id="catalogImage" src="https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/1.webp" />
+  </div>
+
+  <!--Flechas de navegación para cambiar de imagen-->
+  <div class="catalog-navigation">
+    <button class="nav-arrow" onclick="prevImage()">‹</button>
+    <button class="nav-arrow" onclick="nextImage()">›</button>
+  </div>
+</div>
+
+<script>
+  // Arreglo con las URLs de las imágenes del catálogo
+  const images = [
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/1.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/2.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/3.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/4.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/5.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/6.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/7.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/8.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/9.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/10.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/11.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/12.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/13.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/14.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/15.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/16.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/17.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/18.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/19.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/20.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/21.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/22.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/23.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/24.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/25.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/26.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/27.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/28.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/29.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/30.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/31.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/32.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/33.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/34.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/35.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/36.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/37.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/38.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/39.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/40.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/41.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/42.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/43.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/44.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/45.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/46.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/47.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/48.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/49.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/50.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/51.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/52.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/53.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/54.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/55.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/56.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/57.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/58.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/59.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/60.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/61.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/62.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/63.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/64.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/65.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/66.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/67.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/68.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/69.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/70.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/71.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/72.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/73.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/74.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/75.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/76.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/77.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/78.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/79.webp',
+        'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/80.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/81.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/82.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/83.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/84.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/85.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/86.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/87.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/88.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/89.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/90.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/91.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/92.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/93.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/94.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/95.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/96.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/97.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/98.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/99.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/100.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/101.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/102.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/103.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/104.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/105.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/106.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/107.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/108.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/109.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/110.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/111.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/112.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/113.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/114.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/115.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/116.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/117.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/118.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/119.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/120.webp',
+        'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/121.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/122.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/123.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/124.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/125.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/126.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/127.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/128.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/129.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/130.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/131.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/132.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/133.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/134.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/135.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/136.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/137.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/138.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/139.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/140.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/141.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/142.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/143.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/144.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/145.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/146.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/147.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/148.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/149.webp',
+        'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/150.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/151.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/152.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/153.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/154.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/155.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/156.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/157.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/158.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/159.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/160.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/161.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/162.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/163.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/164.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/165.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/166.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/167.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/168.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/169.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/170.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/171.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/172.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/173.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/174.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/175.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/176.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/177.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/178.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/179.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/180.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/181.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/182.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/183.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/184.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/185.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/186.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/187.webp',
+    'https://nuevasrevistas.com/revistas/mx/fuller/catalogo_2024_15/188.webp'
+
+
+
+  ];
+
+  let currentIndex = 0;
+
+  // Función para cambiar a la imagen anterior
+  function prevImage() {
+    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+    document.getElementById('catalogImage').src = images[currentIndex];
+  }
+
+  // Función para cambiar a la imagen siguiente
+  function nextImage() {
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+    document.getElementById('catalogImage').src = images[currentIndex];
+  }
+</script>
+>
+
+   
+
     <script>
-        // Este bloque registra el Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('worker.js?' + Math.random())
-                .then(function(registration) {
-                    console.log('Service Worker registrado con éxito:', registration);
-                })
-                .catch(function(error) {
-                    console.log('Error al registrar el Service Worker:', error);
-                });
-            });
-        }
+        const toggleButton = document.getElementById('toggleButton');
+        const navLinks = document.getElementById('navLinks');
+
+        toggleButton.addEventListener('click', () => {
+            const isVisible = navLinks.style.maxHeight && navLinks.style.maxHeight !== '0px';
+            if (isVisible) {
+                navLinks.style.maxHeight = '0';
+                navLinks.style.opacity = '0';
+                toggleButton.textContent = 'Mostrar Menú';
+            } else {
+                navLinks.style.maxHeight = '300px';
+                navLinks.style.opacity = '1';
+                toggleButton.textContent = 'Ocultar Menú';
+            }
+        });
 
         // Código para manejar el banner de instalación
         let deferredPrompt;
@@ -97,6 +453,19 @@
                         console.log('Usuario rechazó la instalación');
                     }
                     deferredPrompt = null;
+                });
+            });
+        }
+
+        // Este bloque registra el Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('worker.js?' + Math.random())
+                .then(function(registration) {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch(function(error) {
+                    console.log('Error al registrar el Service Worker:', error);
                 });
             });
         }
