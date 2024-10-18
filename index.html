@@ -4,89 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATALOGOS FULLER</title>
-    <link rel="icon" href="https://i.ibb.co/JQ25WbN/favicon-32x32.png" type="image/png">
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhczamfeeDrsFJhdsPVwiRKthg8ZWKfGEETdSFormIQgtb9fVLMoc_ktkeZEZdU-vu7mMDGwH4WvUAdmN2RH_z7rHPKMuo1o1dzyPwT8cr4cZQRrT5U4reWuTIJaLnuXV0441sY_Oto-lPWuG6I0ysJOBhagCN4si4n4dDt51w6cnNfXjSh_8u9CGjp5VQ/s32/favicon-32x32.png" type="image/png">
     <link rel="manifest" href="manifest.json">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Evita scrolls innecesarios */
+            height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
         }
-
-        #menu {
-            background-color: #fa6e55;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            position: relative;
+        iframe {
+            width: 100%;
+            height: 100%; /* El iframe ocupa todo el alto del body */
+            border: none; /* Sin borde */
+            display: block; /* Elimina espacios en blanco */
         }
-
-        #toggleButton {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        #navLinks {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            transition: max-height 0.3s ease, opacity 0.3s ease;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-        }
-
-        #navLinks a {
-            text-decoration: none;
-        }
-
-        #navLinks button {
-            background-color: orange;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        @media (max-width: 768px) {
-            #navLinks {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        #content {
-            padding: 20px;
-            text-align: center;
-        }
-
         #install-banner {
-            display: none;
+            display: none; /* Oculto por defecto */
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Color verde */
             color: white;
             text-align: center;
             padding: 15px 0;
             z-index: 1000;
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px 10px 0 0;
-            font-family: Arial, sans-serif;
+            border-radius: 10px 10px 0 0; /* Bordes redondeados */
+            font-family: Arial, sans-serif; /* Fuente */
         }
-
         #install-button {
-            background-color: #fff;
-            color: #4CAF50;
+            background-color: #fff; /* Botón blanco */
+            color: #4CAF50; /* Texto verde */
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
@@ -94,195 +43,35 @@
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
         }
-
         #install-button:hover {
-            background-color: #f1f1f1;
-            transform: scale(1.05);
+            background-color: #f1f1f1; /* Cambio de color al pasar el ratón */
+            transform: scale(1.05); /* Efecto de aumento */
         }
     </style>
 </head>
 <body>
-    <div id="menu">
-        <h1 style="margin: 0;">FULLER</h1>
-        <button id="toggleButton">#</button>
-    </div>
-
-    <div id="navLinks">
-        <a href="https://catalogosfuller.blogspot.com/p/catalogos-jafra-body-font-family-arial.html">
-            <button>ACTUALIZAR</button>
-        </a>
-        <a href="https://manny2023.github.io/CATALOGOS-FULLER/catalogoactual.html">
-            <button>VER ACTUAL</button>
-        </a>
-        <a href="https://catalogosfuller.blogspot.com/p/todos-los-catalogos.html">
-            <button>VER TODOS</button>
-        </a>
-        <a href="https://catalogosfuller.blogspot.com/p/pdf-de-campanas.html">
-            <button>DESCARGAR PDF</button>
-        </a>
-        <a href="https://catalogosfuller.blogspot.com/p/radio.html">
-            <button>radio</button>
-        </a>
-        <a href="https://wa.me/?text=Mira%20esta%20PWA%20que%20encontré!%20https://catalogos-fuller.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <button>COMPARTIR</button>
-        </a>
-    </div>
-
-    <!-- Aquí puedes agregar tu propio contenido -->
-    <div id="content">
-        <!-- Inserta tu código aquí -->
-       <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INICIO FULLER PORTADA PRINCIPAL</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Ajusta el fondo a toda la pantalla */
-            flex-direction: column; /* Asegura que el contenido se apile verticalmente */
-        }
-
-        .content {
-            text-align: center;
-            padding: 20px;
-            width: 90%; /* Ancho máximo para evitar que se expanda demasiado */
-            max-width: 1200px;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 100%;
-            margin: 0 auto; /* Centra el contenedor */
-        }
-
-        .catalog-button {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            border: 2px solid #000;
-            border-radius: 15px;
-            padding: 15px;
-            font-size: 16px;
-            color: #000;
-            background: transparent;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: transform 0.3s, border-color 0.3s, color 0.3s;
-            width: 100%;
-            max-width: 250px; /* Tamaño máximo para pantallas pequeñas */
-            text-align: center;
-            flex: 1; /* Permite que los botones se expandan en el espacio disponible */
-            min-width: 200px; /* Ancho mínimo para asegurar que no sean demasiado estrechos */
-        }
-
-        .catalog-button img {
-            width: 50px; /* Tamaño de imagen ajustado para pantallas pequeñas */
-            margin-bottom: 10px;
-        }
-
-        .catalog-button:hover {
-            transform: scale(1.05);
-            color: #000;
-            border-color: #000;
-        }
-
-        @media (min-width: 768px) {
-            .catalog-button {
-                padding: 20px 25px;
-                font-size: 18px;
-                width: calc(33% - 20px); /* Distribución en tres columnas */
-            }
-
-            .catalog-button img {
-                width: 80px; /* Aumenta el tamaño de la imagen en pantallas medianas */
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .catalog-button {
-                padding: 25px 30px;
-                font-size: 20px;
-                width: calc(25% - 20px); /* Ajusta a un tamaño menor para pantallas grandes */
-            }
-
-            .catalog-button img {
-                width: 100px; /* Tamaño de imagen en pantallas grandes */
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="content">
-        <div class="button-container">
-            <a class="catalog-button" href="https://manny2023.github.io/CATALOGOS-FULLER/catalogoactual.html">
-                <img alt="Logo 1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5qdJtFbs7x5dmNJAQMXOL_yF4WMzBLdIjFWxZ2mXaIHZLZ6BdtEq13oPszF1nQRhVhpv0KuYT063od9wSrnCeR_7h9X8xQe3ssF-mfdEn5JlPlHYygE-gen_QJFrVOUPkkgU4GSJbOBaHjosxAaXmH6LCenLvWH1UunSn03kyZa6FPmbWp2UUS6b_oZA/s512/catalogos.png" />
-                VER CATALOGO ACTUAL
-            </a>
-
-            <a class="catalog-button" href="https://catalogosfuller.blogspot.com/p/todos-los-catalogos.html">
-                <img alt="Logo 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgd_FzhsDAGhW7LZ2WVrCKP6-LoNev3u7AW952s6px4bgdSoRbfQM-1pEglLInvEcgHHBwen3XF5YikrMb7CrRuNenW9tFu-WMg2EFt8-1JDunk5NU5zwgHwkbNHnUxS-L2UXJWENTxbkYVLOkUcLRUJS9iOIbPDqeuHqKDPpyTBVmnLee651dVPJC3gXU/s512/catalogar%20(1).png" />
-                VER TODOS LOS CATALOGOS
-            </a>
-
-            <div style="text-align: center;">
-                <script type="text/javascript">
-                    // Ad script
-                    atOptions = {
-                        'key' : '96f555f3f884bf5a0eb838ec88439a4c',
-                        'format' : 'iframe',
-                        'height' : 50,
-                        'width' : 320,
-                        'params' : {}
-                    };
-                </script>
-                <script type="text/javascript" src="//www.topcreativeformat.com/96f555f3f884bf5a0eb838ec88439a4c/invoke.js"></script>
-            </div>
-
-            <a class="catalog-button" href="https://manny2023.github.io/CATALOGOS-FULLER/DESCARGARPDF.HTML">
-                <img alt="Logo 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEjiYycfnFF8wOWIAMk4vh-H8Qri5pXVQpZ-XTYV0gxuEtb3WxGrxoyV5XX8aHbZ-hubWw2gt9vU4HGh94o6eerr0cicA8QqYfLhrKae33B0p06H7YNybeUifqRXo4WJVt5HegDq4mANPWwVHupHgPXXOz06j5vXGSlSVN2Oqg1Zhdb1MPIXbuiWGZTQI/s320/catalogar.png" />
-                DESCARGAR LOS CATALOGOS
-            </a>
-        </div>
-    </div>
-</body>
-</html>
-
-
+    <iframe src="https://catalogosfuller.blogspot.com/p/catalogos-jafra-body-font-family-arial.html"></iframe>
+    
     <!-- Banner de instalación -->
     <div id="install-banner">
         <p style="margin: 0;">¡Instala nuestra aplicación para una mejor experiencia!</p>
         <button id="install-button">Instalar</button>
     </div>
 
+    <script src="main.js"></script>
     <script>
-        const toggleButton = document.getElementById('toggleButton');
-        const navLinks = document.getElementById('navLinks');
-
-        toggleButton.addEventListener('click', () => {
-            const isVisible = navLinks.style.maxHeight && navLinks.style.maxHeight !== '0px';
-            if (isVisible) {
-                navLinks.style.maxHeight = '0';
-                navLinks.style.opacity = '0';
-                toggleButton.textContent = 'Mostrar Menú';
-            } else {
-                navLinks.style.maxHeight = '300px';
-                navLinks.style.opacity = '1';
-                toggleButton.textContent = 'Ocultar Menú';
-            }
-        });
+        // Este bloque registra el Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('worker.js?' + Math.random())
+                .then(function(registration) {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch(function(error) {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+            });
+        }
 
         // Código para manejar el banner de instalación
         let deferredPrompt;
@@ -308,19 +97,6 @@
                         console.log('Usuario rechazó la instalación');
                     }
                     deferredPrompt = null;
-                });
-            });
-        }
-
-        // Este bloque registra el Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('worker.js?' + Math.random())
-                .then(function(registration) {
-                    console.log('Service Worker registrado con éxito:', registration);
-                })
-                .catch(function(error) {
-                    console.log('Error al registrar el Service Worker:', error);
                 });
             });
         }
