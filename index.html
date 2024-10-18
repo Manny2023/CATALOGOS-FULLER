@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INICIO FULLER PORTADA PRINCIPAL</title>
+    <title>CATALOGOS FULLER</title>
     <link rel="icon" href="https://i.ibb.co/JQ25WbN/favicon-32x32.png" type="image/png">
     <link rel="manifest" href="manifest.json">
     <style>
@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
 
         #menu {
@@ -21,9 +20,7 @@
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000; /* Asegurarse de que esté por encima del contenido */
+            position: relative;
         }
 
         #toggleButton {
@@ -41,9 +38,9 @@
             gap: 10px;
             justify-content: center;
             transition: max-height 0.3s ease, opacity 0.3s ease;
-            max-height: 0; /* Ocultar por defecto */
+            max-height: 0;
             overflow: hidden;
-            opacity: 0; /* Ocultar por defecto */
+            opacity: 0;
         }
 
         #navLinks a {
@@ -67,75 +64,40 @@
             }
         }
 
-        .content {
-            text-align: center;
+        #content {
             padding: 20px;
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .catalog-button {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            border: 2px solid #000;
-            border-radius: 15px;
-            padding: 15px 20px;
-            font-size: 16px;
-            color: #000;
-            background: transparent;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: transform 0.3s, border-color 0.3s, color 0.3s;
-            width: 100%;
-            max-width: 250px;
             text-align: center;
         }
 
-        .catalog-button img {
-            width: 50px;
-            margin-bottom: 10px;
+        #install-banner {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px 10px 0 0;
+            font-family: Arial, sans-serif;
         }
 
-        .catalog-button:hover {
+        #install-button {
+            background-color: #fff;
+            color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #install-button:hover {
+            background-color: #f1f1f1;
             transform: scale(1.05);
-            color: #000;
-            border-color: #000;
-        }
-
-        @media (min-width: 768px) {
-            .button-container {
-                justify-content: space-between;
-            }
-
-            .catalog-button {
-                width: 30%;
-            }
-
-            .catalog-button img {
-                width: 80px;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .catalog-button {
-                width: 25%;
-            }
-
-            .catalog-button img {
-                width: 100px;
-            }
         }
     </style>
 </head>
@@ -159,42 +121,20 @@
             <button>DESCARGAR PDF</button>
         </a>
         <a href="https://catalogosfuller.blogspot.com/p/radio.html">
-            <button>RADIO</button>
+            <button>radio</button>
         </a>
         <a href="https://wa.me/?text=Mira%20esta%20PWA%20que%20encontré!%20https://catalogos-fuller.netlify.app/" target="_blank" rel="noopener noreferrer">
             <button>COMPARTIR</button>
         </a>
     </div>
 
-    <div class="content">
-        <div class="button-container">
-            <!-- Aquí va el contenido del catálogo -->
-        </div>
-    </div>
-
-    <script>
-        const toggleButton = document.getElementById('toggleButton');
-        const navLinks = document.getElementById('navLinks');
-
-        toggleButton.addEventListener('click', () => {
-            const isVisible = navLinks.style.maxHeight && navLinks.style.maxHeight !== '0px';
-            if (isVisible) {
-                navLinks.style.maxHeight = '0';
-                navLinks.style.opacity = '0';
-                toggleButton.textContent = '#';
-            } else {
-                navLinks.style.maxHeight = '300px';
-                navLinks.style.opacity = '1';
-                toggleButton.textContent = 'Ocultar Menú';
-            }
-        });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
+    <!-- Aquí puedes agregar tu propio contenido -->
+    <div id="content">
+        <!-- Inserta tu código aquí -->
+       <html lang="es">
 <head>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INICIO FULLER PORTADA PRINCIPAL</title>
     <style>
         body {
@@ -205,13 +145,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height: 100vh; /* Ajusta el fondo a toda la pantalla */
+            flex-direction: column; /* Asegura que el contenido se apile verticalmente */
         }
 
         .content {
             text-align: center;
             padding: 20px;
-            width: 90%;
+            width: 90%; /* Ancho máximo para evitar que se expanda demasiado */
             max-width: 1200px;
         }
 
@@ -222,7 +163,7 @@
             flex-wrap: wrap;
             gap: 20px;
             width: 100%;
-            margin: 0 auto;
+            margin: 0 auto; /* Centra el contenedor */
         }
 
         .catalog-button {
@@ -233,7 +174,7 @@
             text-decoration: none;
             border: 2px solid #000;
             border-radius: 15px;
-            padding: 15px 20px;
+            padding: 15px;
             font-size: 16px;
             color: #000;
             background: transparent;
@@ -241,12 +182,14 @@
             cursor: pointer;
             transition: transform 0.3s, border-color 0.3s, color 0.3s;
             width: 100%;
-            max-width: 250px;
+            max-width: 250px; /* Tamaño máximo para pantallas pequeñas */
             text-align: center;
+            flex: 1; /* Permite que los botones se expandan en el espacio disponible */
+            min-width: 200px; /* Ancho mínimo para asegurar que no sean demasiado estrechos */
         }
 
         .catalog-button img {
-            width: 50px;
+            width: 50px; /* Tamaño de imagen ajustado para pantallas pequeñas */
             margin-bottom: 10px;
         }
 
@@ -257,18 +200,14 @@
         }
 
         @media (min-width: 768px) {
-            .button-container {
-                justify-content: space-between;
-            }
-
             .catalog-button {
                 padding: 20px 25px;
                 font-size: 18px;
-                width: 30%;
+                width: calc(33% - 20px); /* Distribución en tres columnas */
             }
 
             .catalog-button img {
-                width: 80px;
+                width: 80px; /* Aumenta el tamaño de la imagen en pantallas medianas */
             }
         }
 
@@ -276,33 +215,12 @@
             .catalog-button {
                 padding: 25px 30px;
                 font-size: 20px;
-                width: 25%;
+                width: calc(25% - 20px); /* Ajusta a un tamaño menor para pantallas grandes */
             }
 
             .catalog-button img {
-                width: 100px;
+                width: 100px; /* Tamaño de imagen en pantallas grandes */
             }
-        }
-
-        /* Botón de instalación */
-        #install-button {
-            display: none;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-
-        #install-button:hover {
-            background-color: #45a049;
         }
     </style>
 </head>
@@ -319,44 +237,93 @@
                 VER TODOS LOS CATALOGOS
             </a>
 
+            <div style="text-align: center;">
+                <script type="text/javascript">
+                    // Ad script
+                    atOptions = {
+                        'key' : '96f555f3f884bf5a0eb838ec88439a4c',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.topcreativeformat.com/96f555f3f884bf5a0eb838ec88439a4c/invoke.js"></script>
+            </div>
+
             <a class="catalog-button" href="https://manny2023.github.io/CATALOGOS-FULLER/DESCARGARPDF.HTML">
                 <img alt="Logo 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEjiYycfnFF8wOWIAMk4vh-H8Qri5pXVQpZ-XTYV0gxuEtb3WxGrxoyV5XX8aHbZ-hubWw2gt9vU4HGh94o6eerr0cicA8QqYfLhrKae33B0p06H7YNybeUifqRXo4WJVt5HegDq4mANPWwVHupHgPXXOz06j5vXGSlSVN2Oqg1Zhdb1MPIXbuiWGZTQI/s320/catalogar.png" />
                 DESCARGAR LOS CATALOGOS
             </a>
         </div>
     </div>
+</body>
+</html>
 
-    <!-- Botón de instalación de la PWA -->
-    <button id="install-button">Instalar App</button>
+
+    <!-- Banner de instalación -->
+    <div id="install-banner">
+        <p style="margin: 0;">¡Instala nuestra aplicación para una mejor experiencia!</p>
+        <button id="install-button">Instalar</button>
+    </div>
 
     <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const navLinks = document.getElementById('navLinks');
+
+        toggleButton.addEventListener('click', () => {
+            const isVisible = navLinks.style.maxHeight && navLinks.style.maxHeight !== '0px';
+            if (isVisible) {
+                navLinks.style.maxHeight = '0';
+                navLinks.style.opacity = '0';
+                toggleButton.textContent = 'Mostrar Menú';
+            } else {
+                navLinks.style.maxHeight = '300px';
+                navLinks.style.opacity = '1';
+                toggleButton.textContent = 'Ocultar Menú';
+            }
+        });
+
+        // Código para manejar el banner de instalación
         let deferredPrompt;
-        const installButton = document.getElementById('install-button');
 
         window.addEventListener('beforeinstallprompt', (e) => {
-            // Evita que el navegador muestre la solicitud de instalación por defecto
             e.preventDefault();
-            // Guarda el evento para usarlo más tarde
             deferredPrompt = e;
-            // Muestra el botón de instalación
-            installButton.style.display = 'block';
+            showInstallBanner();
         });
 
-        installButton.addEventListener('click', () => {
-            // Oculta el botón de instalación
-            installButton.style.display = 'none';
-            // Muestra la ventana de instalación
-            deferredPrompt.prompt();
-            // Espera a que el usuario responda
-            deferredPrompt.userChoice.then((choiceResult) => {
-                if (choiceResult.outcome === 'accepted') {
-                    console.log('El usuario aceptó la instalación');
-                } else {
-                    console.log('El usuario rechazó la instalación');
-                }
-                deferredPrompt = null;
+        function showInstallBanner() {
+            const installBanner = document.getElementById('install-banner');
+            installBanner.style.display = 'block';
+
+            const installButton = document.getElementById('install-button');
+            installButton.addEventListener('click', () => {
+                installBanner.style.display = 'none';
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('Usuario aceptó la instalación');
+                    } else {
+                        console.log('Usuario rechazó la instalación');
+                    }
+                    deferredPrompt = null;
+                });
             });
-        });
+        }
+
+        // Este bloque registra el Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('worker.js?' + Math.random())
+                .then(function(registration) {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch(function(error) {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+            });
+        }
     </script>
 </body>
 </html>
