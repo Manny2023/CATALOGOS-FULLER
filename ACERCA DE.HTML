@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080000">
+  <title>Catalogos Virtuales</title>
+<link rel="manifest" href="manifest.json">
+  <!-- Iconos -->
+  <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRdZE69wq7ZZrj_LGZn2g_B-W8ZCcLzGhj4PiKmDFP9HIdiYAh-u2kA4ewDDcZppy_v803y3rLqgUMV3ujv8y0Twl1wffcg2dNEa3g2rnmzJsOM_JsSWrGu9y11kiXush725aXu_6EGVnoiiUmktcnwH8e75adPHhgVdo9_bXLuu6DOisB3e6dFnsE1j4/s180/apple-touch-icon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRdZE69wq7ZZrj_LGZn2g_B-W8ZCcLzGhj4PiKmDFP9HIdiYAh-u2kA4ewDDcZppy_v803y3rLqgUMV3ujv8y0Twl1wffcg2dNEa3g2rnmzJsOM_JsSWrGu9y11kiXush725aXu_6EGVnoiiUmktcnwH8e75adPHhgVdo9_bXLuu6DOisB3e6dFnsE1j4/s180/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi-MiTNmt3o8X04g6ZGXvydCZ595GEyE5O3V0drUZldd-DdcigcCP-U0KI4yAS2JsCDWkKrubkoOvzkTkZ6KWEJ4Ep2fGO3GSnbzBn_H-icLxZbha_b49yoNzSVW6TNFZmag3q-K8cKXcRCGurWD1wCPqjaJah8-Ax3xC9yFDgqpdDB6FiGxmhBzwvGRxc/s32/32F.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdxh1t1rp040fNps-ajVbz0jcd4_9oRzSCDtyQKjjLMHmIJBl3ld7Ya3xBEpOzSMnCyFO3gPjHiH048C1F4IF63dmXtRqNWdRLVZ-nEX5mdnSyy5oWLf50hnSWALp8VMuyRPQ5uqoy-GMc0qpYVGNLgETIaFwHfWX0FHR5WcLHCriEhtmYC4FY6CHkR3g/s16/16F.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    header {
+       background-color: #FFA500; /* Fondo NARANJA */
+
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+      font-size: 24px; /* Aumentar tamaño de fuente */
+      font-weight: bold; /* Negrita para resaltar las letras */
+    }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    nav a {
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    nav img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .menu-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 36px;
+    }
+    main {
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    main h1 {
+      margin-bottom: 20px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .button-container img {
+      margin: 10px 0;
+      width: 80%;
+      max-width: 200px;
+    }
+    .install-banner {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: none;
+      z-index: 999;
+    }
+    .install-banner button {
+      background-color: #6200ea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .install-banner button:hover {
+      background-color: #4500b3;
+    }
+    @media screen and (max-width: 768px) {
+      header {
+        font-size: 18px;
+      }
+      nav a {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+    CATALOGOS FULLER
+  </header>
+
+  <nav id="myNav">
+    <a href="javascript:void(0)" class="menu-close-btn" onclick="closeMenu()">&times;</a>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjwW4yqaRydOjg4im6TUo_drye02KOeStZrS7cfk6KpDF_zZbUmvGePejensxHBpNssDqLvCDB1vEWzs8IL42nRPkwd9wo6fDhO5V_s_Z607sP9NeehQIwplgFW4UBxxZvL7od6XQ5k9oA_UA4nfsdALVUwjN5OcC4qm7R08RIqqP59luVWrictPtF3fNg/s192/192A.png" alt="Imagen  alt="Imagen del Menú">
+      <a href="https://catalogos-arabela.netlify.app/index.html">INICIO</a>
+    <a href="https://catalogos-arabela.netlify.app/veractual.html">VER ACTUAL</a>
+    <a href="https://catalogos-arabela.netlify.app/vertodos.html">VER TODOS</a>
+    <a href="https://catalogos-arabela.netlify.app/descargarpdf.html">DESCARGAR PDF</a>
+    <a href="https://wa.me/?text=Mira%20esta%20APP%20%20para ver catalogos!%20https://catalogos-arabela.netlify.app/">COMPARTIR</a>
+    <a href="https://catalogos-arabela.netlify.app/acerca%20de.html">ACERCA DE</a>
+  </nav>
+
+    <main>
+    <iframe src="https://catalogosfuller.blogspot.com/p/politica-de-privacidad-y-contenido-la.html" style="width: 100%; height: 800px; border: none;"></iframe>
+  </main>
+
+  <script>
+    function openMenu() {
+      document.getElementById("myNav").style.width = "250px";
+    }
+
+    function closeMenu() {
+      document.getElementById("myNav").style.width = "0";
+    }
+  </script>
+
+</html>
